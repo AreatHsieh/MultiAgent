@@ -39,16 +39,22 @@
     - `git reset --hard`
     - `git checkout -- .`
     - `git clean -fd`
-11. 通過版本控制保護檢查後，只實作本次 `<CR-###>` 範圍。
+11. 通過版本控制保護檢查後，在修改或建立任何檔案時，必須遵守以下編碼規則：
+    - 修改既有檔前，先執行 `file -i <path>` 確認原始 charset 與換行格式
+    - 建立新檔時，一律使用 UTF-8 without BOM + LF 換行；禁止使用 `echo` 寫檔，改用 `printf` 或工具指令
+    - 寫入完成後，再次執行 `file -i <path>` 驗證編碼；若發現 BOM 執行 `sed -i '1s/^\xEF\xBB\xBF//' <path>`，若發現 CRLF 執行 `sed -i 's/\r//' <path>`
+    - 若無法確保編碼正確，必須停止並回報 blocker
+12. 通過上述檢查後，只實作本次 `<CR-###>` 範圍。
 12. 不要改寫已確認需求，不要重做 PM / SA / SD 的系統設計。
 13. 若實作過程發現規格不足、描述矛盾或重大風險，請停止並向 PM agent 回報需要補充的問題，不要自行擴大假設。
 14. 必要時更新或新增：
     - 程式檔
     - 測試檔
     - 說明文件
-15. 完成後請回報：
+16. 完成後請回報：
     - 完成了哪些功能
     - 修改了哪些檔案
+    - 各修改檔案的編碼驗證結果（charset + line ending）
     - 做了哪些驗證
     - Git repository 路徑
     - 分支名稱
@@ -83,6 +89,9 @@
 - Pre-change status:
 - Post-change status:
 - Initial commit / baseline:
+
+## Encoding Check
+- <path> | charset: utf-8 | line ending: LF | ✅ / ⚠️
 
 ## Blockers
 - ...
