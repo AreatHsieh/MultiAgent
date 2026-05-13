@@ -4,7 +4,7 @@
 
 1. 建立需求檔：
 
-`/mnt/d/AIProject/Workspaces/<project-name>/docs/references/project_idea/requirements.md`
+`<project-root>/docs/references/project_idea/requirements.md`
 
 2. 打開：
 
@@ -26,7 +26,7 @@
 
 2. 讓 CRA 對談並寫出：
 
-`/mnt/d/AIProject/Workspaces/<project-name>/change-requests/CR-###/change-request.md`
+`<project-root>/docs/change-requests/CR-###/change-request.md`
 
 3. 再打開：
 
@@ -42,12 +42,12 @@
 - 若需求模糊，可先由 RA 對談整理
 - 若既有專案增修需求模糊，可先由 CRA 對談整理
 - RA 會提出專案名稱建議並讓你確認
-- RA 會把整理結果寫到 `/mnt/d/AIProject/Workspaces/<project-name>/docs/references/project_idea/ra-handover.md`
+- RA 會把整理結果寫到 `<project-root>/docs/references/project_idea/ra-handover.md`
 - RA 只有在檔案真的寫出來後，才算完成 handover
-- CRA 會把增修需求寫到 `/mnt/d/AIProject/Workspaces/<project-name>/change-requests/CR-###/change-request.md`
+- CRA 會把增修需求寫到 `<project-root>/docs/change-requests/CR-###/change-request.md`
 - PM 可依 change request 產出 `impact-analysis.md` 與 `implementation-plan.md`
 - PM 委派 SA / SD
-- PM 自己建立 `/mnt/d/AIProject/Workspaces/<project-name>/`
+- PM 會把系統規格寫到 `<project-root>/docs/specs/`，把主實作計畫寫到 `<project-root>/docs/plans/`，把狀態檔寫到 `<project-root>/docs/status/`
 - PM 輸出文件
 - 若要開始實作，可再由 PM 直接委派 PG 開始開發
 - 若 PG 發現規格缺口，先由 PM 回補，再讓 PG 繼續
@@ -56,16 +56,16 @@
 
 新專案：
 
-`/mnt/d/AIProject/Workspaces/<project-name>/`
+`<project-root>/docs/`
 
 既有專案增修：
 
-`/mnt/d/AIProject/Workspaces/<project-name>/change-requests/CR-###/`
+`<project-root>/docs/change-requests/CR-###/`
 
 ## 例子
 
 - 需求：`/mnt/d/AIProject/Workspaces/leave-request-system/docs/references/project_idea/requirements.md`
-- 輸出：`/mnt/d/AIProject/Workspaces/leave-request-system/`
+- 輸出：`/mnt/d/AIProject/Workspaces/leave-request-system/docs/`
 
 ## 一句話
 

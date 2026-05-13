@@ -147,9 +147,9 @@
 ## 落檔規則
 
 - CRA 完成訪談後，應將最終 `Change Request` 寫入：
-  `/mnt/d/AIProject/Workspaces/<project-name>/change-requests/CR-###/change-request.md`
+  `<project-root>/docs/change-requests/CR-###/change-request.md`
 - `CR-###` 應使用下一個可用編號，例如 `CR-001`、`CR-002`
-- 若 `change-requests/CR-###/` 尚未存在，可由主 agent 建立
+- 若 `docs/change-requests/CR-###/` 尚未存在，可由主 agent 建立
 - CRA 只寫 `change-request.md`
 - `impact-analysis.md` 與 `implementation-plan.md` 由 PM 在 change kickoff 階段產出
 - 寫檔完成後，應在回覆中明確列出已建立或已更新的檔案

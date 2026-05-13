@@ -1,19 +1,19 @@
 # PG Kickoff Template
 
-把下面這段貼給 Codex CLI 主 agent，再把 `<project-name>` 換成你的專案名稱。
+把下面這段貼給 Codex CLI 主 agent，再把 `<project-root>` 與 `<project-name>` 換成你的專案路徑與名稱。
 
 ```md
 請你擔任 PG agent。
 
 專案規格位置在：
-- `/mnt/d/AIProject/Workspaces/<project-name>/docs/references/project_idea/requirements.md`
-- `/mnt/d/AIProject/Workspaces/<project-name>/docs/references/project_idea/ra-handover.md` 若存在
-- `/mnt/d/AIProject/Workspaces/<project-name>/system-spec.md`
-- `/mnt/d/AIProject/Workspaces/<project-name>/ui-proposal.md`
-- `/mnt/d/AIProject/Workspaces/<project-name>/api-spec.md`
-- `/mnt/d/AIProject/Workspaces/<project-name>/domain-model.md`
-- `/mnt/d/AIProject/Workspaces/<project-name>/implementation-plan.md`
-- `/mnt/d/AIProject/Workspaces/<project-name>/open-questions.md`
+- `<project-root>/docs/references/project_idea/requirements.md`
+- `<project-root>/docs/references/project_idea/ra-handover.md` 若存在
+- `<project-root>/docs/specs/system-spec.md`
+- `<project-root>/docs/specs/ui-proposal.md`
+- `<project-root>/docs/specs/api-spec.md`
+- `<project-root>/docs/specs/domain-model.md`
+- `<project-root>/docs/plans/implementation-plan.md`
+- `<project-root>/docs/specs/open-questions.md`
 
 請你依照以下方式執行：
 

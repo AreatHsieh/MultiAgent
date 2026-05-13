@@ -1,22 +1,23 @@
 # PG Change Kickoff Template
 
-把下面這段貼給 Codex CLI 主 agent，再把 `<project-name>` 與 `<CR-###>` 換成你的專案名稱與變更編號。
+把下面這段貼給 Codex CLI 主 agent，再把 `<project-root>`、`<project-name>` 與 `<CR-###>` 換成你的專案路徑、名稱與變更編號。
 
 ```md
 請你擔任 PG agent，針對既有專案的指定 change request 進行實作。
 
 既有專案文件在：
-- `/mnt/d/AIProject/Workspaces/<project-name>/system-spec.md`
-- `/mnt/d/AIProject/Workspaces/<project-name>/ui-proposal.md`
-- `/mnt/d/AIProject/Workspaces/<project-name>/api-spec.md`
-- `/mnt/d/AIProject/Workspaces/<project-name>/domain-model.md`
-- `/mnt/d/AIProject/Workspaces/<project-name>/implementation-plan.md`
-- `/mnt/d/AIProject/Workspaces/<project-name>/open-questions.md`
+- `<project-root>/docs/specs/system-spec.md`
+- `<project-root>/docs/specs/ui-proposal.md`
+- `<project-root>/docs/specs/api-spec.md`
+- `<project-root>/docs/specs/domain-model.md`
+- `<project-root>/docs/plans/implementation-plan.md`
+- `<project-root>/docs/specs/open-questions.md`
 
 本次變更文件在：
-- `/mnt/d/AIProject/Workspaces/<project-name>/change-requests/<CR-###>/change-request.md`
-- `/mnt/d/AIProject/Workspaces/<project-name>/change-requests/<CR-###>/impact-analysis.md`
-- `/mnt/d/AIProject/Workspaces/<project-name>/change-requests/<CR-###>/implementation-plan.md`
+- `<project-root>/docs/change-requests/<CR-###>/change-request.md`
+- `<project-root>/docs/change-requests/<CR-###>/impact-analysis.md`
+- `<project-root>/docs/change-requests/<CR-###>/implementation-plan.md`
+- `<project-root>/docs/change-requests/<CR-###>/pm-team-status.md`
 
 請你依照以下方式執行：
 

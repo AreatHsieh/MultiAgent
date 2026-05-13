@@ -17,14 +17,14 @@
 1. PM 讀取需求文件，判斷需求是否已足夠明確。
 2. 若需求模糊，PM 先委派 RA 與使用者對談，整理 `Requirement Summary`、`Assumptions`、`Open Questions`。
 3. RA 提出 2 到 3 個專案名稱建議，並由使用者確認最終專案名稱。
-4. RA 將整理結果寫入 `/mnt/d/AIProject/Workspaces/<project-name>/docs/references/project_idea/ra-handover.md`。
+4. RA 將整理結果寫入 `<project-root>/docs/references/project_idea/ra-handover.md`。
 5. PM 根據需求文件與 RA handover，整理需求摘要、目標、範圍、模糊點。
 6. PM 平行委派：
    - SA: 補齊 business rules、workflow rules、edge cases、acceptance considerations
    - SD: 補齊 modules、data model、API、workflow、technical risks
 7. PM 讀回 SA / SD 的結果，處理衝突與缺口。
-8. PM 產出開發文件到 `/mnt/d/AIProject/Workspaces/<project-name>/`。
-9. 若仍有未定事項，PM 另外輸出 `/mnt/d/AIProject/Workspaces/<project-name>/open-questions.md`。
+8. PM 產出開發文件到 `<project-root>/docs/specs/`、`<project-root>/docs/plans/` 與 `<project-root>/docs/status/`。
+9. 若仍有未定事項，PM 另外輸出 `<project-root>/docs/specs/open-questions.md`。
 10. 若準備進入實作，PM 可直接委派 PG 讀取規格並開始開發。
 11. 若 PG 在開發中發現規格不足，PG 應先回問 PM；必要時 PM 再追問 SA / SD、更新文件後，PG 繼續工作。
 
@@ -32,14 +32,14 @@
 
 1. PM 讀取既有專案文件與本次 `change-request.md`，判斷變更需求是否已足夠明確。
 2. 若變更需求模糊，PM 先委派 CRA 與使用者對談，整理 `Current Behavior`、`Expected Behavior`、`Affected Areas`、`Non-Regression Requirements`、`Acceptance Signals`。
-3. CRA 將整理結果寫入 `/mnt/d/AIProject/Workspaces/<project-name>/change-requests/CR-###/change-request.md`。
+3. CRA 將整理結果寫入 `<project-root>/docs/change-requests/CR-###/change-request.md`。
 4. PM 根據既有專案文件與 change request，整理本次變更摘要、範圍、模糊點與風險。
 5. PM 視需要平行委派：
    - SA: 補齊 business rule impact、workflow impact、edge cases、acceptance considerations、non-regression requirements
    - SD: 補齊 affected modules、data model impact、API impact、UI interaction impact、testing impact、technical risks
 6. PM 讀回 SA / SD 的結果，處理衝突與缺口。
-7. PM 產出 `/mnt/d/AIProject/Workspaces/<project-name>/change-requests/CR-###/impact-analysis.md`。
-8. PM 產出 `/mnt/d/AIProject/Workspaces/<project-name>/change-requests/CR-###/implementation-plan.md`。
+7. PM 產出 `<project-root>/docs/change-requests/CR-###/impact-analysis.md`。
+8. PM 產出 `<project-root>/docs/change-requests/CR-###/implementation-plan.md`。
 9. 若需要更新主規格文件，PM 同步更新相關文件，並在 impact analysis 記錄更新理由。
 10. 若仍有未定事項，PM 在 change request 或 impact analysis 中標示 blockers，並視情況回到 CRA 補問。
 11. 若準備進入實作，PM 可直接委派 PG 讀取既有規格與本次 change request 開始開發。
@@ -67,18 +67,20 @@
 
 ### New Project
 
-- `/mnt/d/AIProject/Workspaces/<project-name>/system-spec.md`
-- `/mnt/d/AIProject/Workspaces/<project-name>/ui-proposal.md`
-- `/mnt/d/AIProject/Workspaces/<project-name>/api-spec.md`
-- `/mnt/d/AIProject/Workspaces/<project-name>/domain-model.md`
-- `/mnt/d/AIProject/Workspaces/<project-name>/implementation-plan.md`
-- `/mnt/d/AIProject/Workspaces/<project-name>/open-questions.md`
+- `<project-root>/docs/specs/system-spec.md`
+- `<project-root>/docs/specs/ui-proposal.md`
+- `<project-root>/docs/specs/api-spec.md`
+- `<project-root>/docs/specs/domain-model.md`
+- `<project-root>/docs/plans/implementation-plan.md`
+- `<project-root>/docs/specs/open-questions.md`
+- `<project-root>/docs/status/pm-team-status.md`
 
 ### Existing Project Change
 
-- `/mnt/d/AIProject/Workspaces/<project-name>/change-requests/CR-###/change-request.md`
-- `/mnt/d/AIProject/Workspaces/<project-name>/change-requests/CR-###/impact-analysis.md`
-- `/mnt/d/AIProject/Workspaces/<project-name>/change-requests/CR-###/implementation-plan.md`
+- `<project-root>/docs/change-requests/CR-###/change-request.md`
+- `<project-root>/docs/change-requests/CR-###/impact-analysis.md`
+- `<project-root>/docs/change-requests/CR-###/implementation-plan.md`
+- `<project-root>/docs/change-requests/CR-###/pm-team-status.md`
 
 ## Output Standard
 

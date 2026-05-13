@@ -1,6 +1,6 @@
 # CRA Dialogue Template
 
-把下面這段貼給 Codex CLI 主 agent，即可先讓 CRA agent 跟你對談、整理既有專案的增修需求。
+把下面這段貼給 Codex CLI 主 agent，再把 `<project-root>` 與 `<project-name>` 換成你的專案路徑與名稱，即可先讓 CRA agent 跟你對談、整理既有專案的增修需求。
 
 ```md
 請你擔任 CRA agent。
@@ -32,7 +32,7 @@
 5. 對 UI 類需求，請主動追問目標畫面、操作流程、狀態與響應式需求。
 6. 對資料 / API 類需求，可以追問相容性與既有資料影響，但不要直接做技術設計。
 7. 當你判斷資訊足夠時，請實際建立：
-   `/mnt/d/AIProject/Workspaces/<project-name>/change-requests/CR-###/change-request.md`
+   `<project-root>/docs/change-requests/CR-###/change-request.md`
    其中 `CR-###` 使用下一個可用編號，例如 `CR-001`。
 8. 將最終 `Change Request` 寫入該檔案，並在對話中同步輸出。
 9. 完成後請明確告訴我你實際寫入的檔案路徑；若沒寫成功，不要說已完成。

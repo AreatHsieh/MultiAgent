@@ -1,6 +1,6 @@
 # RA Dialogue Template
 
-把下面這段貼給 Codex CLI 主 agent，即可先讓 RA agent 跟你對談、整理需求。
+把下面這段貼給 Codex CLI 主 agent，再把 `<project-root>` 與 `<project-name>` 換成你的專案路徑與名稱，即可先讓 RA agent 跟你對談、整理需求。
 
 ```md
 請你擔任 RA agent。
@@ -27,7 +27,7 @@
    - content source / asset constraints，例如圖片來源、授權方式、素材數量、風格要求
    - technical constraints / preferences，例如前後端模式、開發語言、部署限制
 4. 在需求收斂後，請主動提出 2 到 3 個專案名稱建議，並讓我確認最終專案名稱。
-5. 當你判斷資訊足夠且專案名稱已確認時，請實際建立 `/mnt/d/AIProject/Workspaces/<project-name>/docs/references/project_idea/`，並將 `RA Handover` 寫入 `/mnt/d/AIProject/Workspaces/<project-name>/docs/references/project_idea/ra-handover.md`，再在對話中同步輸出。
+5. 當你判斷資訊足夠且專案名稱已確認時，請實際建立 `<project-root>/docs/references/project_idea/`，並將 `RA Handover` 寫入 `<project-root>/docs/references/project_idea/ra-handover.md`，再在對話中同步輸出。
 6. 完成後請明確告訴我你實際寫入的檔案路徑；若沒寫成功，不要說已完成。
 7. 你可以問技術限制與偏好，但不要直接做技術設計，也不要跳到 API、資料表或框架選型。
 

@@ -28,31 +28,34 @@
 
 ### 新專案
 
-- 需求輸入：`/mnt/d/AIProject/Workspaces/<project-name>/docs/references/project_idea/requirements.md`
-- RA handover：`/mnt/d/AIProject/Workspaces/<project-name>/docs/references/project_idea/ra-handover.md`
-- 專案輸出：`/mnt/d/AIProject/Workspaces/<project-name>/`
-- 狀態檔：`/mnt/d/AIProject/Workspaces/<project-name>/pm-team-status.md`
+- 專案根目錄：`<project-root>`
+- 需求輸入：`<project-root>/docs/references/project_idea/requirements.md`
+- RA handover：`<project-root>/docs/references/project_idea/ra-handover.md`
+- 專案規格輸出：`<project-root>/docs/specs/`
+- 專案計畫輸出：`<project-root>/docs/plans/`
+- 狀態檔：`<project-root>/docs/status/pm-team-status.md`
 
 新專案輸出通常包含：
 
-- `system-spec.md`
-- `ui-proposal.md`
-- `api-spec.md`
-- `domain-model.md`
-- `implementation-plan.md`
-- `open-questions.md`
+- `docs/specs/system-spec.md`
+- `docs/specs/ui-proposal.md`
+- `docs/specs/api-spec.md`
+- `docs/specs/domain-model.md`
+- `docs/plans/implementation-plan.md`
+- `docs/specs/open-questions.md`
 
 ### 既有專案增修
 
-- 變更需求：`/mnt/d/AIProject/Workspaces/<project-name>/change-requests/CR-###/change-request.md`
-- 變更輸出：`/mnt/d/AIProject/Workspaces/<project-name>/change-requests/CR-###/`
-- 狀態檔：`/mnt/d/AIProject/Workspaces/<project-name>/change-requests/CR-###/pm-team-status.md`
+- 變更需求：`<project-root>/docs/change-requests/CR-###/change-request.md`
+- 變更輸出：`<project-root>/docs/change-requests/CR-###/`
+- 狀態檔：`<project-root>/docs/change-requests/CR-###/pm-team-status.md`
 
 增修資料夾通常包含：
 
 - `change-request.md`
 - `impact-analysis.md`
 - `implementation-plan.md`
+- `pm-team-status.md`
 
 ## 建議工作順序
 
@@ -90,14 +93,14 @@ CRA discovery -> PM change planning -> PG implementation
 
 請先由 RA 逐步訪談我，確認 product goal、target users、core scenarios、data elements、business rules、scope、acceptance signals、edge cases、constraints、素材限制與技術偏好。不要直接進入技術設計。
 
-需求收斂後，請提出 2 到 3 個專案名稱建議讓我確認。專案名稱確認後，請建立 Workspaces/<project-name>/docs/references/project_idea/ra-handover.md，並更新 Workspaces/<project-name>/pm-team-status.md。
+需求收斂後，請提出 2 到 3 個專案名稱建議讓我確認。專案名稱確認後，請建立 `<project-root>/docs/references/project_idea/ra-handover.md`，並更新 `<project-root>/docs/status/pm-team-status.md`。
 ```
 
 完成後查看：
 
 ```text
-/mnt/d/AIProject/Workspaces/<project-name>/docs/references/project_idea/ra-handover.md
-/mnt/d/AIProject/Workspaces/<project-name>/pm-team-status.md
+<project-root>/docs/references/project_idea/ra-handover.md
+<project-root>/docs/status/pm-team-status.md
 ```
 
 ## 新專案需求已清楚
@@ -108,17 +111,18 @@ CRA discovery -> PM change planning -> PG implementation
 請使用 $pm-team 啟動新專案 PM planning。
 
 專案名稱：<project-name>
-需求文件：Workspaces/<project-name>/docs/references/project_idea/requirements.md
+專案根目錄：<project-root>
+需求文件：<project-root>/docs/references/project_idea/requirements.md
 
-請讀取 requirements.md；如果有 ra-handover.md 也一起讀取。請由 PM 統整 SA 與 SD 的分析，產出 system-spec.md、ui-proposal.md、api-spec.md、domain-model.md、implementation-plan.md、open-questions.md，並更新 pm-team-status.md。
+請讀取 requirements.md；如果有 ra-handover.md 也一起讀取。請由 PM 統整 SA 與 SD 的分析，產出 `docs/specs/system-spec.md`、`docs/specs/ui-proposal.md`、`docs/specs/api-spec.md`、`docs/specs/domain-model.md`、`docs/plans/implementation-plan.md`、`docs/specs/open-questions.md`，並更新 `docs/status/pm-team-status.md`。
 
-若資訊不足，請把未決事項寫入 open-questions.md，不要直接停止。
+若資訊不足，請把未決事項寫入 `docs/specs/open-questions.md`，不要直接停止。
 ```
 
 完成後查看：
 
 ```text
-/mnt/d/AIProject/Workspaces/<project-name>/
+<project-root>/docs/
 ```
 
 ## 新專案一路做到規劃
@@ -131,7 +135,7 @@ CRA discovery -> PM change planning -> PG implementation
 我的初步想法是：
 <描述你的產品、目標使用者、核心場景>
 
-請先由 RA 訪談整理需求，確認專案名稱後寫入 ra-handover.md。若需求已足夠，接著由 PM 整合 SA / SD 分析，產出完整專案規格與 implementation-plan.md。請全程維護 Workspaces/<project-name>/pm-team-status.md。
+請先由 RA 訪談整理需求，確認專案名稱後寫入 `docs/references/project_idea/ra-handover.md`。若需求已足夠，接著由 PM 整合 SA / SD 分析，產出完整專案規格與 `docs/plans/implementation-plan.md`。請全程維護 `docs/status/pm-team-status.md`。
 ```
 
 ## 既有專案增修需求模糊
@@ -145,14 +149,14 @@ CRA discovery -> PM change planning -> PG implementation
 目前想改的是：
 <描述 bug、功能調整、UI 調整、重構或文件變更>
 
-請由 CRA 逐步訪談我，釐清 current behavior、expected behavior、影響範圍、不可破壞的既有行為、驗收條件與限制。需求收斂後，請建立下一個 CR 編號，寫入 Workspaces/<project-name>/change-requests/CR-###/change-request.md，並更新該 CR 的 pm-team-status.md。
+請由 CRA 逐步訪談我，釐清 current behavior、expected behavior、影響範圍、不可破壞的既有行為、驗收條件與限制。需求收斂後，請建立下一個 CR 編號，寫入 `<project-root>/docs/change-requests/CR-###/change-request.md`，並更新該 CR 的 `pm-team-status.md`。
 ```
 
 完成後查看：
 
 ```text
-/mnt/d/AIProject/Workspaces/<project-name>/change-requests/CR-###/change-request.md
-/mnt/d/AIProject/Workspaces/<project-name>/change-requests/CR-###/pm-team-status.md
+<project-root>/docs/change-requests/CR-###/change-request.md
+<project-root>/docs/change-requests/CR-###/pm-team-status.md
 ```
 
 ## 既有專案 CR 已清楚
@@ -164,16 +168,17 @@ CRA discovery -> PM change planning -> PG implementation
 
 專案名稱：<project-name>
 CR 編號：<CR-###>
-變更需求文件：Workspaces/<project-name>/change-requests/<CR-###>/change-request.md
+專案根目錄：<project-root>
+變更需求文件：<project-root>/docs/change-requests/<CR-###>/change-request.md
 
-請讀取既有專案文件與 change-request.md，由 PM 統整 SA / SD 分析，產出 impact-analysis.md 與 implementation-plan.md。若可以實作，請標示 Ready for PG: Yes；若不行，請列出 blockers。請更新該 CR 的 pm-team-status.md。
+請讀取既有專案文件與 change-request.md，由 PM 統整 SA / SD 分析，產出 `impact-analysis.md` 與 `implementation-plan.md`。若可以實作，請標示 Ready for PG: Yes；若不行，請列出 blockers。請更新該 CR 的 `pm-team-status.md`。
 ```
 
 完成後查看：
 
 ```text
-/mnt/d/AIProject/Workspaces/<project-name>/change-requests/<CR-###>/impact-analysis.md
-/mnt/d/AIProject/Workspaces/<project-name>/change-requests/<CR-###>/implementation-plan.md
+<project-root>/docs/change-requests/<CR-###>/impact-analysis.md
+<project-root>/docs/change-requests/<CR-###>/implementation-plan.md
 ```
 
 ## 開始實作
@@ -184,9 +189,10 @@ CR 編號：<CR-###>
 請使用 $pm-team 進入 PG implementation。
 
 專案名稱：<project-name>
-請讀取 Workspaces/<project-name>/pm-team-status.md、system-spec.md、ui-proposal.md、api-spec.md、domain-model.md、implementation-plan.md，依照 implementation-plan.md 開始實作。
+專案根目錄：<project-root>
+請讀取 `<project-root>/docs/status/pm-team-status.md`、`<project-root>/docs/specs/system-spec.md`、`<project-root>/docs/specs/ui-proposal.md`、`<project-root>/docs/specs/api-spec.md`、`<project-root>/docs/specs/domain-model.md`、`<project-root>/docs/plans/implementation-plan.md`，依照 `implementation-plan.md` 開始實作。
 
-請完成必要測試，回報修改檔案與驗證結果，並更新 pm-team-status.md。
+請完成必要測試，回報修改檔案與驗證結果，並更新 `docs/status/pm-team-status.md`。
 ```
 
 ### 既有專案 CR 實作
@@ -197,7 +203,7 @@ CR 編號：<CR-###>
 專案名稱：<project-name>
 CR 編號：<CR-###>
 
-請讀取 Workspaces/<project-name>/change-requests/<CR-###>/pm-team-status.md、change-request.md、impact-analysis.md、implementation-plan.md，以及相關既有專案文件。請依照 CR implementation-plan.md 實作、測試，回報修改檔案與驗證結果，並更新該 CR 的 pm-team-status.md。
+請讀取 `<project-root>/docs/change-requests/<CR-###>/pm-team-status.md`、`change-request.md`、`impact-analysis.md`、`implementation-plan.md`，以及相關既有專案文件。請依照 CR `implementation-plan.md` 實作、測試，回報修改檔案與驗證結果，並更新該 CR 的 `pm-team-status.md`。
 ```
 
 ## 恢復進度
@@ -209,7 +215,7 @@ CR 編號：<CR-###>
 
 專案名稱：<project-name>
 
-請先讀取 Workspaces/<project-name>/pm-team-status.md，判斷目前階段、已完成事項、目前輸出檔案與下一步，然後繼續執行 Next Action。
+請先讀取 `<project-root>/docs/status/pm-team-status.md`，判斷目前階段、已完成事項、目前輸出檔案與下一步，然後繼續執行 Next Action。
 ```
 
 既有專案 CR 恢復：
@@ -220,7 +226,7 @@ CR 編號：<CR-###>
 專案名稱：<project-name>
 CR 編號：<CR-###>
 
-請先讀取 Workspaces/<project-name>/change-requests/<CR-###>/pm-team-status.md，判斷目前階段與 Next Action，然後繼續處理。
+請先讀取 `<project-root>/docs/change-requests/<CR-###>/pm-team-status.md`，判斷目前階段與 Next Action，然後繼續處理。
 ```
 
 ## 手動模板備援
@@ -235,9 +241,9 @@ CR 編號：<CR-###>
 手動模板流程：
 
 1. 打開對應模板。
-2. 替換 `<project-name>` 與 `<CR-###>`。
+2. 替換 `<project-root>`、`<project-name>` 與 `<CR-###>`。
 3. 把整段提示詞貼給 Codex CLI 主 agent。
-4. 到 `Workspaces/<project-name>/` 或 `Workspaces/<project-name>/change-requests/<CR-###>/` 查看結果。
+4. 到 `<project-root>/docs/` 或 `<project-root>/docs/change-requests/<CR-###>/` 查看結果。
 
 ## 你不用做的事
 

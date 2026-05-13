@@ -2,7 +2,7 @@
 
 這個資料夾是 PM-led agent team 的流程範本，不是實際專案工作區。
 
-實際專案實作請放在 `/mnt/d/AIProject/Workspaces/<project-name>/`。專案需求與 RA handover 等重要參考文件請放在該專案的 `docs/references/project_idea/`。歷史輸出與搬遷前備份資料請放在 `/mnt/d/AIProject/Archives/`。
+實際專案實作應寫回該專案的 `project_root`。若沒有其他明確專案路徑，可用 `/mnt/d/AIProject/Workspaces/<project-name>/` 作為預設 `project_root`。專案需求與 RA handover 等重要參考文件請放在該專案的 `docs/references/project_idea/`。歷史輸出與搬遷前備份資料請放在 `/mnt/d/AIProject/Archives/`。
 
 ## 目錄內容
 
@@ -10,15 +10,20 @@
 - `workflow/`: PM 如何驅動 RA / CRA / SA / SD / PG 的流程文件。
 - `templates/`: 系統規格、API、domain model、implementation plan 等輸出模板。
 - `examples/commands/`: 可複製使用的 kickoff 與 dialogue 指令範本。
-- `docs/`: 操作手冊、快速開始與歷史 project implement 說明。
+- `docs/`: 操作手冊、快速開始、專案結構標準與歷史 project implement 說明。
 
 ## 使用原則
 
 - `team-template` 只放流程、prompt、template、文件與範例。
 - 不在 `team-template` 內放正式專案原始碼。
 - 不在 `team-template` 內放正式專案 git repo。
-- 新專案或既有專案實作應建立在 `Workspaces/<project-name>/`。
+- 專案產出一律寫回 `project_root`，不要寫回 `team-template`。
+- `Workspaces/<project-name>/` 只是預設 `project_root`，不是唯一合法位置。
 - 若需要保留專案需求或 RA handover，放到該專案的 `docs/references/project_idea/`。
+- 系統規格文件放在該專案的 `docs/specs/`。
+- 主實作計畫放在該專案的 `docs/plans/`。
+- 專案主狀態檔放在該專案的 `docs/status/`。
+- 變更需求文件放在該專案的 `docs/change-requests/CR-###/`。
 - 若只是搬遷前備份或不再作為專案依據的歷史輸出，放到 `Archives/`。
 
 ## 常用範本
@@ -42,7 +47,7 @@
 原本的 `example-team/project_idea` 專案參考文件已移入各自專案：
 
 ```text
-/mnt/d/AIProject/Workspaces/<project-name>/docs/references/project_idea
+<project-root>/docs/references/project_idea
 ```
 
 原本的 `example-team/project_implement` 實際專案已搬到：
